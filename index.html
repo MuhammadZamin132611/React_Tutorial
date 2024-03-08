@@ -8,6 +8,19 @@
 </head>
 <body>
     <div id="mydiv"></div>
-    <script type="text/babel"></script>
+    <script type="text/babel">
+        function Test()
+        {
+            const bla=()=>{alert("Hello React")}
+            return <button onClick={bla}>Click Me</button>
+        }
+        class Hello extends React.Component{
+            render()
+            {
+              return <div>Hello React code <Test /></div>  
+            }
+        }
+        ReactDOM.render(<Hello />,document.getElementById('mydiv'))
+        </script>
 </body>
 </html>
